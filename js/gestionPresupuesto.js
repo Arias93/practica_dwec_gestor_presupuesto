@@ -1,14 +1,14 @@
 let presupuesto = 0;
 
 function actualizarPresupuesto(valor) {
-    if (valor>0){
-        presupuesto=presupuesto+valor;
+    if (valor >= 0){
+        presupuesto=valor;
         return presupuesto;
     }
     else{ 
         console.log("Has introducido un valor negativo");
         return -1;
-    };
+    }
 }
 
 function mostrarPresupuesto() {
@@ -23,6 +23,26 @@ function CrearGasto(descripcion, valor) {
     }
     else{
         this.valor=0;
+    }
+
+    //metodos:
+
+    this.mostrarGasto = function(){
+        return(`Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`);
+    }
+
+    this.actualizarDescripcion = function (descripcion){
+        this.descripcion=descripcion;
+    }
+
+    this.actualizarValor = function (nuevoValor){
+        if (nuevoValor>=0)
+        {
+            this.valor=nuevoValor;
+        }
+        else{
+            console.log("Has introducido un valor negativo");
+        }
     }
 }
 

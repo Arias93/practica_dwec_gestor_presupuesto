@@ -1,12 +1,12 @@
 let presupuesto = 0;
 
-function actualizarPresupuesto() {
-    if (numero>0){
-        presupuesto=presupuesto+numero;
+function actualizarPresupuesto(valor) {
+    if (valor>0){
+        presupuesto=presupuesto+valor;
         return presupuesto;
     }
     else{ 
-        console.log("Has introducido un numero negativo");
+        console.log("Has introducido un valor negativo");
         return -1;
     };
 }
@@ -15,8 +15,15 @@ function mostrarPresupuesto() {
     return `Tu presupuesto actual es de ${presupuesto} €`;
 }
 
-function CrearGasto() {
-    
+function CrearGasto(descripcion, valor) {
+    this.descripcion=descripcion;
+
+    if (valor>0){
+        this.valor=valor;
+    }
+    else{
+        this.valor=0;
+    }
 }
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.

@@ -1,4 +1,6 @@
 let presupuesto = 0;
+let gastos = [];
+let idGasto = 0;
 
 function actualizarPresupuesto(valor) {
     if (valor >= 0){
@@ -15,7 +17,7 @@ function mostrarPresupuesto() {
     return `Tu presupuesto actual es de ${presupuesto} €`;
 }
 
-function CrearGasto(descripcion, valor) {
+function CrearGasto(descripcion, valor, ) {//Funcion constructora.
     this.descripcion=descripcion;
 
     if (valor>0){
@@ -46,11 +48,31 @@ function CrearGasto(descripcion, valor) {
     }
 }
 
+function listarGastos(){
+    return gastos;
+}
+function anyadirGasto(){
+
+}
+function borrarGasto(){
+    
+}
+function calcularTotalGastos(){
+
+}
+function calcularBalance(){
+
+}
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
 // Las funciones y objetos deben tener los nombres que se indican en el enunciado
 // Si al obtener el código de una práctica se genera un conflicto, por favor incluye todo el código que aparece aquí debajo
 export   {
     mostrarPresupuesto,
     actualizarPresupuesto,
-    CrearGasto
+    CrearGasto,
+    listarGastos,
+    anyadirGasto,
+    borrarGasto,
+    calcularTotalGastos,
+    calcularBalance,
 }

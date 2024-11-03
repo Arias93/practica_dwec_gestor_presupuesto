@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 let presupuesto = 0;
 let gastos = [];
 let idGasto = 0;
+
 
 function actualizarPresupuesto(valor) {
     if (valor >= 0){
@@ -17,7 +19,8 @@ function mostrarPresupuesto() {
     return `Tu presupuesto actual es de ${presupuesto} €`;
 }
 
-function CrearGasto(descripcion, valor, ) {//Funcion constructora.
+function CrearGasto(descripcion, valor) {
+
     this.descripcion=descripcion;
 
     if (valor>0){
